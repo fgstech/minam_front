@@ -1,0 +1,40 @@
+/* Estilos para el contenedor de la cuadrícula */
+.available-times .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+    padding: 5px;
+}
+
+.available-times label {
+    font-size: 13px;
+    color: var(--main-text-color);
+    margin: 0;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+/* Estilos para los botones de tiempo */
+.available-times .time-button {
+    padding: 5px;
+    color: var(--main-text-color);
+    border: 1px solid #F4F7FE;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    background-color: #F4F7FE;
+    transition: background-color 0.3s ease;
+    outline: 0;
+}
+
+/* Cambiar color cuando se selecciona una hora */
+.available-times .time-button.selected {
+    background-color: var(--main-color);
+    color: white;
+}
+
+/* Cambiar el color del botón cuando el mouse pasa por encima */
+.available-times .time-button:not(.selected):hover {
+    background-color: #f0f0f0;
+}

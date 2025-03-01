@@ -1,0 +1,51 @@
+.notify {
+    position: relative;
+    top: 15px;
+    right: 15px;
+    min-width: 300px;
+    max-width: 400px;
+    width: 100%;
+    color: white;
+    text-align: left;
+    padding: 10px;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 4px;
+    z-index: 1000;
+    font-size: 14px;
+    background-color: #1093FC;
+    display: flex;
+    align-items: center;
+}
+
+.notify .notify-body .notify-title{
+
+}
+
+.notify .notify-body p {
+    margin: 0;
+}
+
+.notify .notify-icon{
+    width: 30px;
+    height: 30px;
+}
+
+.notify .notify-icon svg path{
+    fill: #fff;
+}
+
+.notify.danger {
+    background-color: #FF1B1B;
+}
+
+.notify.success {
+    background-color: #43C548;
+}
+
+.notify.info {
+    background-color: #1093FC;
+}
+
+.notify.warning {
+    background-color: #FF9800;
+}

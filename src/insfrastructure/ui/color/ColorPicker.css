@@ -1,0 +1,68 @@
+/* Estilos generales */
+.color-picker-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.bk-color-label {
+    font-size: 13px;
+    color: var(--main-text-color);
+    margin: 0;
+    font-weight: 500;
+}
+
+.bk-color-label-top {
+    margin-bottom: 5px;
+}
+
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(24px, 1fr));
+    grid-gap: 6px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.color-box {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.color-box.selected {
+    outline: 2px solid var(--main-color);
+    transform: scale(1.1);
+}
+
+.hex-input {
+    width: 100px;
+    padding: 5px;
+    height: 26px;
+    border: 1px solid var(--main-color)40;
+    border-radius: 4px;
+    background-color: #F4F7FE;
+    font-size: 13px;
+    color: var(--main-text-color)!important;
+    font-weight: 600;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.color-picker-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.color-picker {
+    width: 100px;
+    height: 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}

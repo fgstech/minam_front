@@ -1,0 +1,79 @@
+.rich-text-editor-container .rich-text-editor {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  border: 1px solid #E0E5F2;
+  border-radius: var(--buttons-border-radius);
+  background-color: #F4F7FE80;
+  margin-bottom: 15px;
+}
+
+.rich-text-editor-container .SelectLabel {
+  font-size: 13px;
+  color: var(--main-text-color);
+  margin: 0;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.rich-text-editor-container .toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px;
+  background-color: #F4F7FE80;
+  border-radius: 4px 4px 0 0;
+}
+
+.rich-text-editor-container .toolbar button,
+.rich-text-editor-container .toolbar select,
+.rich-text-editor-container .toolbar input {
+  padding: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #F4F7FE80;
+  font-size: 14px;
+  color: var(--main-text-color);
+  outline: 0;
+}
+
+.rich-text-editor-container .toolbar button:hover,
+.rich-text-editor-container .toolbar select:hover,
+.rich-text-editor-container .toolbar input:hover {
+  opacity: .70;
+}
+
+.rich-text-editor-container .toolbar button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.rich-text-editor-container .toolbar button svg path {
+  stroke: var(--main-text-color);
+}
+
+.rich-text-editor-container .toolbar select {
+  cursor: pointer;
+}
+
+.rich-text-editor-container .toolbar input {
+  width: 150px;
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.rich-text-editor-container .editor {
+  border: none;
+  background: #fff;
+  ;
+  min-height: 200px;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 16px;
+  outline: none;
+  /* Elimina el borde azul al hacer clic */
+  border-radius: 0 0 15px 15px;
+  color: var(--main-text-color);
+}

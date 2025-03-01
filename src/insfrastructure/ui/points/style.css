@@ -1,0 +1,17 @@
+.points-container{
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    gap: 4px;
+    align-items: center;
+    background-color: #E9531E;
+    padding: 0px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    color: #fff;
+    height: 34px;
+}
+
+
+.points-container svg{
+    height: 20px;
+}

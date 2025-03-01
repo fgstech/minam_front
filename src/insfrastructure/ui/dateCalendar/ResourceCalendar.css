@@ -1,0 +1,224 @@
+:root {
+    --time-slot-height: 80px;
+    --border-color: #F4F7FE;
+    --color-text: #15183C;
+}
+
+.week-calendar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: relative;
+}
+
+.week-calendar-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    background-color: #fff;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.week-calendar-controls span {
+    color: var(--color-text);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.week-calendar-controls span .separatedate {
+    font-weight: 300 !important;
+    margin: 0 10px;
+}
+
+.week-calendar-controls button {
+    padding: 0px 12px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.week-calendar-controls button.btn-today {
+    border: 1px solid var(--main-color);
+    border-radius: 6px;
+    color: var(--main-color);
+    background: #fff;
+    font-size: 12px;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+.week-calendar .week-calendar-controls button.btn-today:hover {
+    color: #fff;
+    background: var(--main-color);
+}
+
+.week-calendar .week-calendar-controls button svg path {
+    stroke: var(--color-text);
+}
+
+.week-calendar .week-days-header {
+    display: flex;
+    background-color: #fff;
+    width: 100%;
+}
+
+.week-calendar .week-day-header {
+    flex: 1;
+    padding: 3px 10px;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--color-text);
+}
+
+.week-calendar .week-day-header .numeric {
+    font-weight: bold;
+    padding: 5px;
+    display: inline-block;
+}
+
+.week-calendar .week-day-header.today .numeric {
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 5px;
+}
+
+.week-calendar .scrollable-grid {
+    display: flex;
+    flex-grow: 1;
+    overflow-y: auto;
+    position: relative;
+    width: 100%;
+}
+
+.week-calendar .time-column {
+    width: 60px;
+    border-right: 1px solid var(--border-color);
+    flex-shrink: 0;
+}
+
+.week-calendar .time-slot {
+    height: var(--time-slot-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--color-text);
+    font-weight: 400;
+}
+
+.week-calendar .day-column {
+    flex: 1;
+    position: relative;
+    border-left: 1px solid var(--border-color);
+    height: max-content;
+}
+
+.week-calendar .day-column.today {
+    background-color: var(--main-color)05;
+}
+
+.week-calendar .hour-cell {
+    height: var(--time-slot-height);
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+.week-calendar .event {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+    cursor: pointer;
+    height: 100%;
+}
+
+.week-calendar .current-time-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    height: 2px;
+    margin: 20px 0;
+    background-image: linear-gradient(to right, var(--main-color) 60%, rgba(255, 255, 255, 0) 0%);
+    background-position: bottom;
+    background-size: 10px 2px;
+    background-repeat: repeat-x;
+}
+
+.week-calendar .event-group {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.week-calendar .event-group .event {
+    width: 100%;
+    margin: 0 0px;
+}
+
+
+.week-calendar .calendar-event {
+    display: grid;
+    grid-template-columns: 5px 1fr;
+    /* Bordes a la izquierda y contenido a la derecha */
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    height: 100%;
+    overflow: hidden;
+}
+
+.week-calendar .calendar-event:hover {
+    background-color: #f1f1f1;
+}
+
+.week-calendar .event-border {
+    background: #4CAF50;
+    /* Color del borde izquierdo */
+    border-radius: 8px 0 0 8px;
+}
+
+.week-calendar .event-content {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    /* Header y descripción */
+    padding: 5px;
+}
+
+.week-calendar .event-header {
+    display: grid;
+    justify-content: space-between;
+    /* Título y hora en la misma línea */
+    align-items: center;
+}
+
+.week-calendar .event-title {
+    font-size: 13px;
+    font-weight: bold;
+    color: #15183C;
+    /* Mismo color que el borde */
+}
+
+.week-calendar .event-time {
+    font-size: 10px;
+    color: #555;
+}
+
+.week-calendar .event-description {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #777;
+}

@@ -1,0 +1,9 @@
+.page-component{
+    padding: 20px;
+}
+.page-component h2{
+    font-size: 34px;
+    color: var(--main-text-color);
+    font-family: "DM Sans" sans-serif!important;
+    font-weight: 700!important;
+}

@@ -1,0 +1,71 @@
+.dashboard-container {
+    padding: 20px;
+}
+
+.dashboard-header h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.kpi-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.kpi-card {
+    background: #fff;
+    border: 1px solid #F4F7FE;
+    padding: 15px;
+    border-radius: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.kpi-card h3 {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--main-text-color);
+}
+
+.kpi-card p {
+    font-weight: 600;
+    font-size: 36px;
+    color: var(--main-text-color);
+}
+
+.label-appoitments {
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--main-text-color);
+}
+
+.next-appointments {
+    margin-bottom: 20px;
+}
+
+.state-badge {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.dashboard-info-panel {
+    padding: 15px;
+    background-color: #F4F7FE;
+    border-radius: 8px;
+}
+
+.dashboard-info-panel h2{
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--main-text-color);
+}
+
+.dashboard-info-panel p{
+    font-weight: normal;
+    font-size: 16px;
+    color: var(--main-text-color);
+}

@@ -1,0 +1,141 @@
+/* Estlos Login */
+
+.form h2 {
+    color: #13102E;
+    font-weight: 600;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.form form {
+    width: 378px;
+}
+
+.form form input {
+    width: 378px;
+    height: 40px;
+    border: 1px solid #E6E6E6;
+    margin-bottom:15px;
+    outline: 0;
+}
+
+.form-control:focus, .btn-sl:focus {
+    outline: 0;
+    border-color: none;
+    box-shadow: none;
+}
+
+.form-control::placeholder {
+    color: #686868;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.btn-sl {
+    padding: 5px 40px;
+    background-color: #E9531E;
+    color: #FFF;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 15px;
+    border: none;
+}
+
+.form-check-label {
+    color: #686868;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.form-check-input {
+    position: absolute;
+    margin-top: 8px;
+    margin-left: -17px;
+}
+
+.form .recover p {
+    color: var(--color-secundario);
+    font-weight: 400;
+    font-size: 12px;
+    font-style: italic;
+    padding-left: 60px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.form .help a {
+    color: #686868;
+    font-weight: 400;
+    font-size: 12px;
+    text-decoration-line: underline;
+}
+
+.form .help a:hover {
+    color: var(--color-secundario);
+}
+
+/* Estilos error input */
+
+.error {
+    border: 1px solid #EB6464!important;
+    color: #EB6464!important;
+    position: relative;
+}
+
+.error-label {
+    font-size: 10px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    display: block;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #EB6464;
+    opacity: 1;
+}
+
+/* Estilos modal */
+
+.login .modal-body {
+    padding: 0 30px;
+    text-align: center;
+}
+
+.login .modal-body p {
+    color: #13102E;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0px;
+    font-style: normal;
+    line-height: 24px;
+}
+
+.login .modal-header {
+    padding: 0;
+    border-bottom: none;
+    padding-right: 7px;
+}
+
+.login .modal-footer {
+    border-top: none;
+}
+
+.login .modal a{
+    color: #045F92!important;
+    cursor: pointer;
+}
+
+
+h1.brand {
+    margin: 0 15px;
+    padding: 0;
+    color: #126fec;
+    font-weight: 700;
+    letter-spacing: 5px;
+    font-size: 60px;
+}
+
+.brand span{
+    color:#333;
+}

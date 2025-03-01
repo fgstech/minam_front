@@ -1,0 +1,98 @@
+.buttonPrimary {
+    border-radius: var(--buttons-border-radius);
+    background-color: var(--main-color);
+    color: #fff;
+    border: 1px solid var(--main-color);
+    outline: 0;
+    font-size: 14px;
+    font-weight: 600;
+    height: 46px;
+    min-width: 200px;
+}
+
+.buttonPrimary.text-button {
+    color: var(--main-color);
+    background-color: transparent;
+    border: none;
+    min-width: 100px;
+}
+
+.iconButton {
+    background-color: #F4F7FE;
+    border: 1px solid #F4F7FE;
+    border-radius: var(--buttons-border-radius);
+    height: 37px;
+    width: 37px;
+    color: var(--main-color);
+}
+
+.iconButton.type-primary {
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    color: #fff;
+}
+
+.iconButton svg {
+    height: 20px;
+    width: 20px;
+}
+
+
+.iconButton svg path {
+    stroke: var(--main-color);
+}
+
+.iconButton:hover {
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+.iconButton:hover svg path {
+    stroke: #F4F7FE;
+}
+
+.iconButton.type-primary svg path {
+    stroke: #F4F7FE;
+}
+
+.iconButton.type-primary:hover {
+    background-color: #F4F7FE;
+    border: 1px solid #F4F7FE;
+}
+
+.iconButton.type-primary:hover svg path {
+    stroke: var(--main-color);
+}
+
+.iconButton.danger:hover {
+    background-color: #E31A1A;
+    border-color: #E31A1A;
+    color: #fff;
+}
+
+.iconButton.danger:hover svg path {
+    stroke: #fff;
+}
+
+.iconButton.danger svg path{
+    stroke: #E31A1A;
+}
+
+.dangerButton {
+    border-radius: var(--buttons-border-radius);
+    background-color: #E31A1A;
+    color: #fff;
+    border: 1px solid #E31A1A;
+    outline: 0;
+    font-size: 14px;
+    font-weight: 600;
+    height: 46px;
+    min-width: 200px;
+}
+
+.dangerButton.text-button {
+    color: #E31A1A;
+    background-color: transparent;
+    border: none;
+    min-width: 100px;
+}

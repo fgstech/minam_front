@@ -1,0 +1,20 @@
+/* DayScheduleSelector.css */
+
+.day-schedule-selector {
+    padding: 16px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ahora 3 columnas porque eliminamos el selector de intervalo */
+    gap: 16px;
+  }
+  
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }

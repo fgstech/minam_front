@@ -1,0 +1,45 @@
+/* Navbar de Tabs */
+.tabs-navbar {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .tab-button {
+    background-color: #F4F7FE;
+    border: 1px solid #F4F7FE;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--main-text-color);
+    border-radius: var(--buttons-border-radius);
+    outline: 0!important;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tab-button:hover {
+    background-color: #E0E5F2;
+  }
+  
+  .tab-button.active {
+    background-color: var(--main-color);
+    color: white;
+    border: 1px solid var(--main-color);
+  }
+  
+  /* .tabs-content {} */
+
+  @media (max-width: 768px) {
+    .tabs-navbar {
+      overflow-x: auto; /* Habilitar scroll horizontal */
+      white-space: nowrap; /* Evitar que los tabs se rompan a la siguiente línea */
+      gap: 10px;
+    }
+  
+    .tab-button {
+      flex: 0 0 auto; /* Mantener el tamaño automático del botón en el scroll */
+    }
+  
+    .tabs-navbar::-webkit-scrollbar {
+      display: none; /* Ocultar la barra de desplazamiento en navegadores basados en Webkit */
+    }
+  }

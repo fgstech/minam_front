@@ -1,0 +1,97 @@
+.chat-container {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    width: auto;
+    background: white;
+    font-weight: 500;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(100%);
+}
+
+.chat-container.open {
+    transform: translateY(0);
+}
+
+.chat-header {
+    background: var(--main-color);
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chat-body {
+    padding: 15px;
+}
+
+.chat-message p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.button-close, .options button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid var(--main-color);
+    background-color: transparent;
+    color: var(--main-color);
+    cursor: pointer;
+    border-radius: 5px;
+    outline: 0;
+}
+
+.options button:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.back-button {
+    background: transparent;
+    border:none;
+    outline: 0!important;
+    margin-top: 15px;
+}
+
+.text-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.text-input-container input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+.text-input-container .send-button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.text-input-container .send-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+/* div className="text-input-container"> */

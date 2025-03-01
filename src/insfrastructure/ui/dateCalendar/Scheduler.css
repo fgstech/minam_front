@@ -1,0 +1,39 @@
+.calendar-day {
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.calendar-day.selected {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.calendar-day.available-day {
+    border: 2px solid green; /* Resaltar días con disponibilidad */
+}
+
+.calendar-day:hover {
+    background-color: #f0f0f0;
+}
+
+.empty-day {
+    padding: 10px;
+    margin: 5px;
+    visibility: hidden;
+}
+
+.available-times ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.available-times li {
+    margin: 5px 0;
+    background-color: #f0f0f0;
+    padding: 5px;
+    border-radius: 4px;
+}
