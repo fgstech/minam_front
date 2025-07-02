@@ -154,7 +154,7 @@
 .layout-navbar .items-nav {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 8px;
     justify-content: flex-end;
 }
 

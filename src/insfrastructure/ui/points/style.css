@@ -1,6 +1,6 @@
 .points-container{
     display: grid;
-    grid-template-columns: 30px 1fr;
+    grid-template-columns: 1fr;
     gap: 4px;
     align-items: center;
     background-color: #E9531E;
@@ -11,6 +11,9 @@
     height: 40px;
 }
 
+.points-container.nam {
+    grid-template-columns: 30px 1fr;
+}
 
 .points-container svg{
     height: 30px;

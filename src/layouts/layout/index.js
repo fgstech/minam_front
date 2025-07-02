@@ -6,7 +6,7 @@ import LayoutComponent from '../../insfrastructure/ui/layout';
 import Menu from './menu'
 import navbarMenus from './navbar_menu';
 import './style.css';
-import WorkStatusModal from '../../insfrastructure/ui/workStatus';
+// import WorkStatusModal from '../../insfrastructure/ui/workStatus';
 
 const Layout = (props) => {
 
@@ -28,11 +28,11 @@ const Layout = (props) => {
                 <Rutas />
             </LayoutComponent>
             <Notifications />
-            <WorkStatusModal
+            {/* <WorkStatusModal
                 isOpen={isModalOpen}
                 onClose={() => setIsModalOpen(false)}
                 onChange={(data) => console.log("Response:", data)}
-            />
+            /> */}
         </>
     )
 }

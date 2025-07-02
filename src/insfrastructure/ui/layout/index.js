@@ -91,7 +91,8 @@ const Navbar = ({ navbarMenus, isActive, handleNavigate, userName = '' }) => {
                         {menu.label}
                     </div>
                 ))}
-                <Points />
+                <Points type="nam" />
+                <Points type="xp" />
                 <AvatarDropdown name={userName} menuItems={menuItems} />
             </div>
         </header>
