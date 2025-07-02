@@ -1,0 +1,60 @@
+.ranking-nam tr.active {
+    background:#e9531e;
+    font-weight: bold;
+    color: white;
+}
+
+.ranking-nam tr.active td{
+    color: white;
+    border: none!important;
+}
+
+.ranking-nam tr.active td:first-child{
+    border-radius: 15px 0 0 15px;
+}
+
+.ranking-nam tr.active td:last-child{
+    border-radius: 0 15px 15px 0;
+}
+
+
+.total-participants{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 8px;
+    align-items: center;
+    width: max-content;
+}
+
+.total-participants label{
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    margin: 0;
+}
+
+.total-participants .box-points{
+    text-align: center;
+    background: #F4F7FE;
+    border-radius: 8px;
+    color: #e9531e;
+    font-weight: 900;
+    font-size: 18px;
+    width: max-content;
+    padding: 5px 20px;
+}
+
+
+.header-ranking{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+
+@media(max-width:991px){
+    .header-ranking{
+        grid-template-columns: 1fr;
+    }   
+}

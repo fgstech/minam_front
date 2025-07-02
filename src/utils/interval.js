@@ -27,20 +27,5 @@ export const intervalHour = (init, end, inter) => {
         }
 
         recursive();
-
-        // while (minutesOfDay(actualHour) <= minutesOfDay(endHour)) {
-        //     if (minutesOfDay(actualHour) <= minutesOfDay(endHour)) {
-        //         hours.push(actualHour.format('HH:mm'));
-        //         console.log(actualHour.format('HH:mm'));
-        //     }
-
-        //     actualHour = actualHour.add(interval, 'minute')
-        // }
-
-        // if (actualHour.isSameOrAfter(endHour) || actualHour.format('HH:mm') === endHour.format('HH:mm')) {
-        //     resolve(hours);
-        // }
-        // console.log(hours);
-        // resolve(hours);
     })
 }

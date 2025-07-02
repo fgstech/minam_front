@@ -13,6 +13,7 @@ const OrdersView = ({ ...props }) => {
                 data={orders}
                 customElements={customElements}
                 tableLabel="Mis canjes"
+                itemsPerPage={100} 
                 fullPage={true}
                 showLabel={false}
             />

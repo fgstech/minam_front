@@ -1,0 +1,66 @@
+/* Contenedor principal */
+.dashboard-container {
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Sección de KPI */
+.dashboard-container .section {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Título de la sección */
+.dashboard-container .section h2 {
+    margin: 0 0 15px;
+    font-size: 20px;
+    color: #212529;
+}
+
+/* Agrupación de KPI */
+.dashboard-container .kpi-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Tarjeta KPI */
+.dashboard-container .kpi-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    width: 200px;
+}
+
+/* Íconos */
+.dashboard-container .icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #212529;
+}
+
+/* Títulos */
+.dashboard-container h3 {
+    margin: 5px 0;
+    font-size: 1.2rem;
+}
+
+/* Valores */
+.dashboard-container p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 5px 0;
+}

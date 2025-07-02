@@ -3,9 +3,9 @@ import endpoint from '../Endpoint';
 import jwt_decode from './jwt';
 
 class AxiosService {
-    accessTokenKey = 'atfgscomm';
-    refreshTokenKey = 'rtfgscomm';
-    idTokenKey = 'itfgscomm';
+    accessTokenKey = 'atminam';
+    refreshTokenKey = 'rtminam';
+    idTokenKey = 'idtminam';
     constructor(endpoint) {
         this.endpoint = endpoint;
         this.initializeInterceptors();
@@ -136,7 +136,6 @@ class AxiosService {
                 originalRequest._retry = true; // Evita bucles infinitos
                 try {
                     const newAccessToken = await this.refreshToken();
-                    console.log("RefreshToken: ",newAccessToken)
                     originalRequest.headers.Authorization = `Bearer ${newAccessToken}`;
                     return axios(originalRequest); // Reintenta la solicitud
                 } catch (err) {

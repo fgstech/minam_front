@@ -128,14 +128,17 @@ const DynamicTable = ({
                         <table>
                             <thead>
                                 <tr>
-                                    {headers.map((header) => (
-                                        <th key={header.key} onClick={() => setSortConfig({
-                                            key: header.key,
-                                            direction: sortConfig.key === header.key && sortConfig.direction === 'asc' ? 'desc' : 'asc'
-                                        })}>
-                                            {header.label}
-                                        </th>
-                                    ))}
+                                    {headers.map((header) => {
+                                        const styles = header?.style || {};
+                                        return (
+                                            <th key={header.key} style={styles} onClick={() => setSortConfig({
+                                                key: header.key,
+                                                direction: sortConfig.key === header.key && sortConfig.direction === 'asc' ? 'desc' : 'asc',
+                                            })}>
+                                                {header.label}
+                                            </th>
+                                        )
+                                    })}
                                 </tr>
                             </thead>
                             <tbody>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Applications from '../../../application/Applications';
 import PointsAPI from '../../../api/points';
+import AxiosService from "../../../lib/axios"
 import "./style.css";
 
 const Points = () => {
@@ -9,9 +9,9 @@ const Points = () => {
 
     useEffect(async () => {
         try {
-            const userId = Applications.getLS("itfgscomm");
+            const userId = AxiosService.getIdToken();
             const res = await PointsAPI.getWallet(userId);
-            const {balance } = res.data.data;
+            const { balance } = res.data.data;
             setPoints(format(balance));
         } catch (err) {
             setPoints(format(0));

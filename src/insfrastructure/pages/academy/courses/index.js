@@ -18,6 +18,7 @@ const CoursesView = ({ ...props }) => {
                 fullPage={true}
                 showLabel={false}
                 isLoading={loaderData}
+                itemsPerPage={100}
                 loaderComponent={<Loader text="Cargando datos, por favor espera..." />}
                 emptyText="No hay registros en la base de datos."
             />

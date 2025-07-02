@@ -9,6 +9,7 @@ import Login from './layouts/login/index';
 import RecoveryPassword from './layouts/login/recoverPassword';
 import NavigationService from './utils/history';
 import Application from './application/Applications';
+import CVView from './insfrastructure/pages/cv';
 
 require('./utils/prototypes');
 
@@ -28,8 +29,8 @@ function App() {
 				<Switch>
 					<Route exact path="/login" component={Login}></Route>
 					<Route exact path="/recovery" component={RecoveryPassword}></Route>
+					<Route path="/profile/:id" component={CVView} />
 					<Route path="/" component={() => Middleware(Layout)} />
-					{/* <Route path="/" component={PublicPageBranch} /> */}
 				</Switch>
 			</BrowserRouter>
 		</CookiesProvider>

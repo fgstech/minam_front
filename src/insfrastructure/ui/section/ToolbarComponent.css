@@ -61,7 +61,7 @@
 .toolbar-children {
     overflow-y: auto;
     /* border-top: 1px solid #F4F7FE; */
-    height: auto;
+    height: 100vh;
 }
 
 .title-container {

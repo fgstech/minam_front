@@ -7,7 +7,7 @@ class CoursesController {
         { key: 'title', label: 'Nombre' },
         { key: 'description', label: 'Descripción' },
         { key: 'status', label: 'Estado' },
-        { key: 'total_progress', label: 'Progreso total' },
+        { key: 'total_progress', label: 'Progreso', textAlign:"center" },
         { key: 'actions', label: 'Acciones' }
     ];
 

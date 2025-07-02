@@ -7,14 +7,23 @@ export const PrimaryButton = ({ text, onClick, type, ...props }) => {
     </>
 }
 
-export const IconButton = ({ children, onClick, type, style, ...props }) => {
-    return <>
-        <button onClick={onClick} style={style} className={`iconButton ${type === "primary" ? 'type-primary' : type}`}>{children}</button>
-    </>
-}
+export const IconButton = ({ children, onClick, type, style, disabled = false, ...props }) => {
+    return (
+        <button
+            onClick={onClick}
+            style={style}
+            className={`iconButton ${type === "primary" ? 'type-primary' : type}`}
+            disabled={disabled}
+            {...props}
+        >
+            {children}
+        </button>
+    );
+};
+
 
 IconButton.defaultProps = {
-    style:{}
+    style: {}
 }
 
 
@@ -65,7 +74,7 @@ export const Button = ({ variant, size, disabled, loading, onClick, children, st
         display: 'inline-flex',
         alignItems: 'center',
         justifyContent: 'center',
-        outline:0,
+        outline: 0,
         ...getButtonSize(),
         ...style, // Para estilos adicionales personalizados
     };

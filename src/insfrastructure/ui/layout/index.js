@@ -3,6 +3,8 @@ import NavigationService from '../../../utils/history';
 import './Layout.css';
 import Points from '../points';
 import ToolbarComponent from '../section';
+import AvatarDropdown from '../avatarDropdown';
+import { closeSession } from '../../../lib/Router';
 
 const Brand = ({ widget = null, openSidebar, setOpenSidebar }) => {
     return (
@@ -71,7 +73,10 @@ const LayoutNav = ({ sidebarMenus, isActive, handleNavigate, toggleSubMenu, open
     )
 }
 
-const Navbar = ({ navbarMenus, isActive, handleNavigate, openSidebar, isOpenSidebar }) => {
+const Navbar = ({ navbarMenus, isActive, handleNavigate, userName = '' }) => {
+    const menuItems = [
+        { label: "Cerrar sesión", action: () => closeSession() },
+    ];
     return (
         <header className="layout-navbar">
 
@@ -87,6 +92,7 @@ const Navbar = ({ navbarMenus, isActive, handleNavigate, openSidebar, isOpenSide
                     </div>
                 ))}
                 <Points />
+                <AvatarDropdown name={userName} menuItems={menuItems} />
             </div>
         </header>
     )
@@ -95,7 +101,7 @@ const Navbar = ({ navbarMenus, isActive, handleNavigate, openSidebar, isOpenSide
 const Layout = ({
     sidebarMenus,
     navbarMenus,
-    rightSidebarContent,
+    userName,
     children,
 }) => {
     const [openSubMenu, setOpenSubMenu] = useState(null);
@@ -159,7 +165,7 @@ const Layout = ({
                 <ToolbarComponent
                     label={getNameMenu(currentPath)}
                     removeTitleContainer={true}
-                    extraElements={<Navbar openSidebar={setOpen} isOpenSidebar={open} navbarMenus={navbarMenus} isActive={isActive} handleNavigate={handleNavigate} />}>
+                    extraElements={<Navbar userName={userName} openSidebar={setOpen} isOpenSidebar={open} navbarMenus={navbarMenus} isActive={isActive} handleNavigate={handleNavigate} />}>
                     <main className="layout-content">{children}</main>
                 </ToolbarComponent>
             </div>

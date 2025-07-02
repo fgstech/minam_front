@@ -11,23 +11,19 @@ import WorkStatusModal from '../../insfrastructure/ui/workStatus';
 const Layout = (props) => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [userName, setUserName] = useState("")
 
-    useEffect(() => { }, [])
-    useEffect(() => Applications.loadMain(), []);
-
-    const rightSidebarContent = (
-        <div>
-            <h3>Herramientas</h3>
-            <p>Esta es la barra de herramientas.</p>
-        </div>
-    );
+    useEffect(() => {
+        Applications.loadMain();
+        Applications.on("profile", data => setUserName(`${data.name} ${data.lastname}`))
+    }, []);
 
     return (
         <>
             <LayoutComponent
                 sidebarMenus={Menu}
                 navbarMenus={navbarMenus}
-                rightSidebarContent={rightSidebarContent}
+                userName={userName}
             >
                 <Rutas />
             </LayoutComponent>

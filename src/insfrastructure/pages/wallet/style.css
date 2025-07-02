@@ -1,0 +1,42 @@
+.header-panel{
+    margin-bottom: 60px;
+    display: block; 
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.header-panel .avatar-wallet{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+    background-color:#fff;
+    border: none
+
+}
+
+.header-panel .avatar-wallet img{
+    width: 100%;
+    height: 100%;
+}
+
+.header-panel .namis-wallet{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 5px;
+    background-color: #E9531E;
+    color: white;
+    border-radius: 100px;
+    height: 50px;
+    max-width: max-content;
+    margin: 0 auto;
+    font-size: 24px;
+    padding-left: 5px;
+    padding-right: 10px;
+}

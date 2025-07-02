@@ -1,4 +1,5 @@
 import { getUserId } from "../lib/Router";
+import Endpoint from '../Endpoint'
 import Ngex from "../insfrastructure/helpers/ngex/ngex";
 import reducer from "../state/reducer";
 import UserAPI from "../api/user";
@@ -8,8 +9,7 @@ import MarketplaceAPI from "../api/mercado";
 import AxiosService from '../lib/axios';
 
 class Application extends Ngex {
-    kId = "itfgscomm";
-    idwlKey = "lwfgscomm";
+    idwlKey = "lwminam";
     constructor(state) {
         super(state);
         this.loadMain = this.loadMain.bind(this);
@@ -61,14 +61,15 @@ class Application extends Ngex {
             .then(res => {
                 const productsMarketplace = res.data;
                 this.updateState(state => ({ productsMarketplace }))
-                console.log(this.state.productsMarketplace);
             })
             .catch(err => console.log(err))
     }
 
     async getUserData() {
-        const data = await UserAPI.getProfile(this.getLS(this.kId));
+        const kid = AxiosService.getIdToken();
+        const data = await UserAPI.getProfile(kid);
         const profile = data.data;
+        profile.avatar = this.parseAvatar(profile);
         this.setLS(this.idwlKey, profile.idlw);
         this.updateState(state => ({ profile }));
     }
@@ -78,7 +79,8 @@ class Application extends Ngex {
     }
 
     async getIdKeycloak() {
-        return this.getLS(this.kId);
+        const kid = AxiosService.getIdToken();
+        return kid;
     }
 
     getLS(key) {
@@ -89,9 +91,48 @@ class Application extends Ngex {
         return localStorage.setItem(key, value)
     }
 
-    async getPayload(){
+    async getPayload() {
         return await AxiosService.getPayloadRaw();
     }
+
+    parseAvatar(data) {
+        return this.validateImageUrl(data.avatar || this.generateAvatar(data.name))
+    }
+
+    validateImageUrl(imageUrl) {
+        try {
+            const urlObject = new URL(imageUrl);
+            return imageUrl;
+        } catch (error) {
+            return `${Endpoint}${imageUrl.startsWith("/") ? "" : "/"}${imageUrl}`;
+        }
+    }
+
+    generateAvatar(name, size = 100) {
+        // Obtener las iniciales del nombre
+        const initials = name
+            .split(" ")
+            .map(word => word[0])
+            .join("")
+            .toUpperCase();
+
+        // Generar un color de fondo aleatorio
+        const colors = ["#E9531E"];
+        const backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+        // Crear un SVG con las iniciales y el fondo de color
+        const svg = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">
+                <rect width="${size}" height="${size}" fill="${backgroundColor}" rx="50%" />
+                <text x="50%" y="50%" font-size="${size / 2.5}" fill="#FFF" font-family="Arial, sans-serif" text-anchor="middle" dominant-baseline="central">
+                    ${initials}
+                </text>
+            </svg>
+        `;
+
+        // Convertir SVG a Data URL
+        return `data:image/svg+xml;base64,${btoa(svg)}`;
+    };
 }
 
 

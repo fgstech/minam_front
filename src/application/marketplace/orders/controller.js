@@ -6,8 +6,8 @@ class OrdersMarketplaceController {
         { key: 'id', label: 'Nº orden' },
         { key: 'date_created', label: "Fecha" },
         { key: 'status', label: 'Estado' },
-        { key: 'total', label: 'Total' },
-        // { key: 'actions', label: 'Acciones' }
+        { key: 'total', label: 'Total', style: { textAlign: "center" } },
+        { key: 'actions', label: 'Acciones',  style: { textAlign: "right" } }
     ];
 
 
